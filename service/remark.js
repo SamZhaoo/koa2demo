@@ -70,3 +70,41 @@
 //     }
 //     return queryData
 // }
+
+
+// 原生路由
+// async function route(url){
+//     let page = ''
+//     switch(url){
+//         case'/':
+//             page = 'index.html'
+//             break;
+//         case'/home':
+//             page = 'home.html'
+//             break;
+//         default:
+//             page = '404.html'
+//     }
+//     let html = await render(page)
+//     return html;
+// }
+
+// function render(page){
+//     return new Promise((resolve,reject)=>{
+//         let pageUrl = `./pages/${page}`
+//         fs.readFile(pageUrl,"binary",(err,data)=>{
+//             if(err){
+//                 reject(err)
+//             } else {
+//                 console.log(data)
+//                 resolve(data)
+//             }
+//         })
+//     })
+// }
+
+// app.use(async(ctx)=>{
+//     let url = ctx.request.url
+//     let html = await route(url)
+//     ctx.body = html
+// })
